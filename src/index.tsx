@@ -5,14 +5,14 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import Hello from './components/StatefulHello';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Home from './components/Home';
 import Contact from './components/Contact'
 
 const routing = (
     <Router>
       <div>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/contact" component={Contact} />
       </div>
     </Router>
