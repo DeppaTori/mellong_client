@@ -5,8 +5,20 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import Hello from './components/StatefulHello';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import Home from './components/Home';
+import Contact from './components/Contact'
 
-ReactDOM.render(<Hello name="TypeScript" />, 
+const routing = (
+    <Router>
+      <div>
+        <Route path="/" component={Home} />
+        <Route path="/contact" component={Contact} />
+      </div>
+    </Router>
+  )
+
+ReactDOM.render(routing, 
 document.getElementById('root') as HTMLElement
 );
 
